@@ -13,6 +13,7 @@ async function fetchBlogDetails() {
       console.log("Blog data: ", data);
 
       // Populate blog details
+      document.getElementById("metaTitle").textContent = data.title;
       document.getElementById("blogImage").src = data.imageUrl || "default-image.jpg";
       document.getElementById("blogTitle").textContent = data.title;
       document.getElementById("blogDescription").innerHTML = data.formattedDescription;
