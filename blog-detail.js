@@ -13,7 +13,7 @@ async function fetchBlogDetails() {
 
  
       if (document.getElementById("headTitle")) {
-        document.getElementById("headTitle").innerText = data.headTitle || "Default Head Title";
+        document.getElementById("headTitle").innerText = data.headTitle || "Best Advertising Agency in Saudi Arabia | Brandbik Creatives";
       }
       if (document.getElementById("metaTitle")) {
         document.getElementById("metaTitle").textContent = data.title || "Default Meta Title";
