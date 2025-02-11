@@ -116,7 +116,6 @@
           <label for="slug">Slug</label>
           <input type="text" id="slug" name="slug" required />
 
-
           <label for="brand">Brand</label>
           <input type="text" id="brand" name="brand" required />
 
@@ -136,6 +135,9 @@
 
           <label for="meta-title">Meta title</label>
           <input type="text" id="meta-title" name="metaTitle" required />
+
+          <label for="canonical">Canonical link</label>
+          <input type="text" id="canonicallink" name="canonical" required />
 
           <label for="meta-description">Meta description</label>
           <textarea
@@ -192,7 +194,7 @@
         console.log("Form data:", formObject);
 
         try {
-          const createBlogAPI = "https://saleelvt-cyberceed-back-end-4.onrender.com/api/create_blog";
+          const createBlogAPI = "https://saleelvt-cyberceed-back-end.onrender.com/api/create_blog";
           const response = await fetch(createBlogAPI, {
             method: "POST",
             headers: {
@@ -206,7 +208,7 @@
             console.log("Blog created successfully:", result);
             alert("Blog created successfully!");
             blogForm.reset();
-            document.getElementById("description-output").innerHTML = ""; // Clear the preview
+            document.getElementById("description-output").innerHTML = "";  
           } else {
             const errorResult = await response.json();
             console.error("Error creating blog:", errorResult.message);
